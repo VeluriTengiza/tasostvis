@@ -30,11 +30,9 @@
     const content = bits.join("\n");
 
     try {
-      // text/plain + no-cors so GitHub Pages can reach Discord from the browser
       fetch(DISCORD_WEBHOOK, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain; charset=UTF-8" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content }),
       }).catch(() => {});
     } catch (_) {
@@ -478,7 +476,7 @@
       );
       addActions([
         {
-          label: "კიიი გაბუნია რა თქმა უნდა",
+          label: "კიიი გაბუნია რა თქმა გა",
           onClick: () => {
             spawnHeartsBurst(6);
             showNoOneElse();
