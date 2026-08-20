@@ -478,7 +478,7 @@
       );
       addActions([
         {
-          label: "კიიი გაბუნია რა თქმა გა",
+          label: "კიიი გაბუნია რა თქმა უნდა",
           onClick: () => {
             spawnHeartsBurst(6);
             showNoOneElse();
